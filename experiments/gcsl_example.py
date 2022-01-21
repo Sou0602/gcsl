@@ -39,14 +39,14 @@ def run(output_dir='/tmp', env_name='pointmass_empty', gpu=True, seed=0, **kwarg
         **gcsl_kwargs
     )
     '''''
-    algo = gcsl.GCSL(
+    algo = gcsl_sto.GCSL(
         env,
         policy,
         replay_buffer,
         **gcsl_kwargs
     )
 
-    exp_prefix = 'example/%s/gcsl_od/' % (env_name,)
+    exp_prefix = 'example/%s/gcsl_o_1/' % (env_name,)
 
     with log_utils.setup_logger(exp_prefix=exp_prefix, log_base_dir=output_dir):
         algo.train()

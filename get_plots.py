@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-env = 'lunar'
+env = 'pointmass_empty'
 '''''
 #door
 df_gcsl_nt = pd.read_csv('data/example/door/gcsl_mt2/2022_01_04_10_18_54/progress.csv')
@@ -16,24 +16,24 @@ df_gcsl_nt = pd.read_csv('data/example/pusher/gcsl_mt2/2022_01_04_10_18_53/progr
 df_gcsl_n = pd.read_csv('data/example/pusher/gcsl_mt/2021_12_23_13_30_05/progress.csv')
 df_gcsl = pd.read_csv('data/example/pusher/gcsl_od/2021_12_24_09_55_32/progress.csv')
 '''''
-#'''''
+'''''
 #lunar
 df_gcsl_nt = pd.read_csv('data/example/lunar/gcsl_mt2/2022_01_04_09_07_39/progress.csv')
 df_gcsl_n = pd.read_csv('data/example/lunar/gcsl_mt/2021_12_23_13_30_35/progress.csv')
 df_gcsl = pd.read_csv('data/example/lunar/gcsl_od/2021_12_24_09_55_32/progress.csv')
-#'''''
+'''''
 '''''
 #pointmass_rooms
 df_gcsl_nt = pd.read_csv('data/example/pointmass_rooms/gcsl_mt2/2022_01_04_09_07_39/progress.csv')
 df_gcsl_n = pd.read_csv('data/example/pointmass_rooms/gcsl_mt/2021_12_23_12_53_03/progress.csv')
 df_gcsl = pd.read_csv('data/example/pointmass_rooms/gcsl_od/2021_12_24_09_55_32/progress.csv')
 '''''
-'''''
+#'''''
 #pointmass_empty
-df_gcsl_nt = pd.read_csv('data/example/pointmass_empty/gcsl_mt/2021_12_23_12_05_28/progress.csv')
-df_gcsl_n = pd.read_csv('data/example/pointmass_empty/gcsl_m/2021_12_22_16_38_59/progress.csv')
-df_gcsl = pd.read_csv('data/example/pointmass_empty/gcsl_od/2021_12_24_09_55_32/progress.csv')
-'''''
+df_gcsl_nt = pd.read_csv('data/example/pointmass_empty/gcsl_mt2_sto_1/2022_01_07_15_00_53/progress.csv')
+df_gcsl_n = pd.read_csv('data/example/pointmass_empty/gcsl_mt2_sto_1/2022_01_06_08_57_07/progress.csv')
+df_gcsl = pd.read_csv('data/example/pointmass_empty/gcsl_o/2021_12_24_01_24_31/progress.csv')
+#'''''
 
 nt_time = df_gcsl_nt['timesteps'].values
 nt_success = df_gcsl_nt['Eval success ratio'].values
@@ -77,7 +77,7 @@ plt.legend()
 plt.title('Average Distance -' + env)
 plt.grid()
 #plt.show()
-plt.savefig('plots_new/'+ env +'_loss/avg_dist.jpg')
+plt.savefig('plots_new/'+ env +'_loss/avg_dist1.jpg')
 plt.close()
 
 plt.plot(time,loss,'b', label = 'GCSL')
@@ -89,7 +89,7 @@ plt.legend()
 plt.title('Loss -' + env )
 plt.grid()
 #plt.show()
-plt.savefig('plots_new/'+env+'_loss/loss.jpg')
+plt.savefig('plots_new/'+env+'_loss/loss1.jpg')
 plt.close()
 
 ##Plot3

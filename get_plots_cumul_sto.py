@@ -249,8 +249,8 @@ plt.ylabel('Success Ratio')
 plt.legend()
 plt.title('Success Ratio -' + env )
 plt.grid()
-#plt.show()
-plt.savefig('plots_new/'+env+'_sto/success.jpg')
+plt.show()
+#plt.savefig('plots_new/'+env+'_sto/success.jpg')
 plt.close()
 
 ## Plot 2
@@ -268,7 +268,7 @@ plt.legend()
 plt.title('Average Distance -' + env )
 plt.grid()
 #plt.show()
-plt.savefig('plots_new/'+env+'_sto/avg_dist.jpg')
+#plt.savefig('plots_new/'+env+'_sto/avg_dist.jpg')
 plt.close()
 
 ## Plot 3
@@ -287,7 +287,7 @@ plt.legend()
 plt.title('Policy Loss -' + env )
 plt.grid()
 #plt.show()
-plt.savefig('plots_new/'+env+'_sto/loss.jpg')
+#plt.savefig('plots_new/'+env+'_sto/loss.jpg')
 plt.close()
 
 

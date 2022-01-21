@@ -236,7 +236,7 @@ class GCSL:
 
         # Evaluation Code
         self.policy.eval()
-        self.evaluate_policy(self.eval_episodes, total_timesteps=0, greedy=False, prefix='Eval')
+        self.evaluate_policy(self.eval_episodes, total_timesteps=0, greedy=True, prefix='Eval')
         logger.record_tabular('policy loss', 0)
         logger.record_tabular('timesteps', total_timesteps)
         logger.record_tabular('epoch time (s)', time.time() - last_time)
@@ -296,7 +296,7 @@ class GCSL:
                     iteration += 1
                     # Evaluation Code
                     self.policy.eval()
-                    self.evaluate_policy(self.eval_episodes, total_timesteps=total_timesteps, greedy=False,
+                    self.evaluate_policy(self.eval_episodes, total_timesteps=total_timesteps, greedy=True,
                                          prefix='Eval')
                     logger.record_tabular('policy loss', running_loss or 0)  # Handling None case
                     logger.record_tabular('timesteps', total_timesteps)

@@ -13,7 +13,7 @@ def get_params(env, env_params):
     buffer_kwargs = dict(
         env=env,
         max_trajectory_length=get_horizon(env_params), 
-        buffer_size=20000,
+        buffer_size=50000,
     )
     replay_buffer = buffer.ReplayBuffer(**buffer_kwargs)
     gcsl_kwargs = default_gcsl_params(env, env_params)
